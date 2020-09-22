@@ -1,0 +1,35 @@
+The only thing that may seem odd to you is that I have late-bound all
+FilsSystem objects. This is done because code compiled against IE5's
+version of the scripting run-time breaks on an IE4 system if FSO 
+objects are early-bound. 
+
+
+Below are few things that I'd like to change about DirGraph, or that other users have requested...
+Sorry if they make no sense at all.
+
+Todo:  Improve speed
+              Reuse scanned dir when scanning next highest
+              Global FSO instead of constant create/destroy
+              Don't use FSO?
+       Up from drive with no parent = all [{local|network}] drives?
+       Options [+ reg]:
+              Show files as blocks is large enough to display
+                     May need to limit number of files to limit no. of objects hanging around
+                            Only track files over a certain size
+                                   [and have a 'files to small' bin in each folder object]
+              Show free-space as a block?
+              All colours, not just highlight colours
+              Colour whole block, not just outline
+                     [outline looks 'neater', I think, but some users want whole block]
+              Account for cluster sizes?
+                     Can detect??
+                         Store drive settings in reg?
+                             i.e. c=4k, d=16k, e=2k...
+              Automaticall may registry change to add to folder context menu
+                     Should be an option, and easy for user to cancel
+       Control:
+              txtNew to combo:
+                     'MRU' [in reg]
+                     Custom options
+                            All local drives
+                            All drives
