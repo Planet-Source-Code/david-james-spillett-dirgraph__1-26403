@@ -1,0 +1,5 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\Folder\shell\Space Consumption Analysis\command]
+@="c:\\dirgraph %L"
+
